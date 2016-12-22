@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Flexi Intro</title>
+	<link rel="stylesheet" href="assets/stylesheets/flexi_style.css" />
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1 class="siteLogo col-xs-12">
+				<img src="assets/images/flexi_logo.png" alt="Flexi-FI finance made simple" />
+			</h1>
+			<!-- <nav class="flexi_nav col-sm-6 align_mdl">
+				 <ol>
+				 	<li>Income</li>
+				 	<li>Expenses</li>
+				 	<li>About you</li>
+				 	<li>Decision</li>
+				 </ol>
+			</nav> -->
+			<section class="flexi_thanks col-sm-7 col-md-5 align_mdl">
+				Thank you. Now we’ll need a little information about your expenses.
+			</section>
+		</div>
+		<div class="row">
+			<div class="col-sm-7 col-md-6 align_mdl">
+				<div class="form-group expenseFrm">
+					<label class="frmLbl" for="">Accomodation expenses</label>
+					<p>Your monthly rent, Mortgage or boarding expense.</p>
+					<div class="row">
+						<div class="col-sm-6">
+							<input type="text" class="form-control" value="€2000" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group expenseFrm">
+					<label class="frmLbl" for="">Household expenses</label>
+					<p>Please provide details of your household expenses.  It is important to take into account any future increases to expenses you are aware of.</p>
+					<section class="radioGroup">
+						<p>
+							<label for="myExpenses">
+								<input type="radio" id="myExpenses" name="household" /> I know my expenses
+							</label>
+						</p>
+						<p>
+							<label for="neeCalc">
+								<input type="radio" id="neeCalc" name="household" /> Help me, I need a calculator
+							</label>
+						</p>
+					</section>
+					<div class="mrgn_t15">
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Groceries
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control " />
+							</div>
+						</div>					
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Vehicle/transportation
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Utilities &amp; rates
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control " />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Entertainment
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								TV, internet &amp; mobile
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control " />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Insurances
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Child related expenses
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control " />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								Other expenses
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="col-sm-6 lbl_right_algn">
+								TOTAL MONTHLY
+							</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control total" />
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group expenseFrm">
+					<label class="frmLbl" for="">Monthly financial obligations</label>
+					<p>Do you have any finance such as credit cards, loans or leases where you are the primary account holder?</p>
+					<section class="radioGroup">
+						<p>
+							<label for="noFinance">
+								<input type="radio" id="noFinance" name="finance" /> I don’t have any finance currently
+							</label>
+						</p>
+						<p>
+							<label for="yesFinance">
+								<input type="radio" id="yesFinance" name="finance" /> I have other finance
+							</label>
+						</p>
+					</section>
+				</div>
+
+				<div class="form-group expenseFrm">
+					<label class="frmLbl" for="">Relationship &amp; dependents</label>
+					<p>Do you have a wife or significant other person who contributes to your household income? Or children you are obligated to make financial payments to?</p>
+					<section class="radioGroup">
+						<p>
+							<label for="yesSpouse">
+								<input type="radio" id="yesSpouse" name="spouse" /> I have a spouse
+							</label>
+						</p>
+						<p>
+							<label for="noSpouse">
+								<input type="radio" id="noSpouse" name="spouse" /> I do not have a spouse
+							</label>
+						</p>
+					</section>
+					<div class="mrgn_t15">
+						<div class="row form-group">
+							<label for="" class="col-sm-12">Spouse monthly income</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="" class="col-sm-12">Number of financial <br/>dependents</label>
+							<div class="col-sm-6">
+								<input type="text" class="form-control" />
+							</div>
+						</div>						
+					</div>					
+				</div>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-7 col-md-6 align_mdl flexi_actionBtns">
+				<div class="row">
+					<div class="col-xs-3 col-sm-4"><a href="#">Back</a></div>
+					<div class="col-xs-6 col-sm-4"><button class="btn primary-btn form-control">Next</button></div>
+					<div class="col-xs-3 col-sm-4 text-right"><a href="#">Save</a></div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="pageFooter frmFooter">
+			<ul>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms &amp; Conditions</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+			<p>&copy; Copyright Flexi Group 2016</p>
+		</footer>
+
+	</div>
+	<script src="assets/js/flexi_JS.js"></script>
+</body>
+</html>

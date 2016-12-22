@@ -1,0 +1,283 @@
+@import '../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap';
+@import 'flexi_variables';
+
+
+body{
+	background: $body-bg;
+	color: $base-fnt-clr;
+	font-family: $font-family;
+	font-size: $base-fnt;
+	padding: 0 10px;
+}
+h1{
+	&.siteLogo{
+		float: none;
+		text-align: center;
+		margin: 50px auto 60px;
+	}
+}
+.align_mdl, .align_mdl_sml{
+	float: none;
+	margin: 0 auto;
+}
+a, a:focus{
+	color: $secondary-clr;
+	text-decoration: none;	
+	&:hover{
+		color: $base-fnt-clr;
+		text-decoration: none;
+	}
+}
+
+.flexi_info{
+	font-size: 1.875em;
+	text-align: center;
+	p{
+		margin: 0 0 10px;
+	}	
+	p:nth-child(1){
+		margin-bottom: 38px;
+	}
+}
+.getStarted{
+	float: none; 
+	margin: 43px auto 50px;
+	background: $primary-clr;
+	padding: 30px;
+	
+	.reqElem{
+		padding-top: 85px;
+		text-align: center;
+		font-size: 1.5em;
+		margin-top: 6px;
+		margin-bottom: 43px;
+	}
+	.IDrequire{
+		background: url('../images/id_card.png') no-repeat center top;		
+	}
+	.over18{
+		background: url('../images/over18.png') no-repeat center top;		
+	}
+	.upfrontFee{
+		background: url('../images/upfront_fee.png') no-repeat center top;		
+	}
+
+	.getStartedBtn{
+		float: none;
+		margin: 0 auto;
+		.btn{
+			width: 100%;
+			line-height: 68px;
+			font-size: 2.1875em;
+			@include primaryBtn_grad();
+			&:focus{
+				outline: none;
+			}
+		}
+	}
+	.resumeApp{
+		text-align: center;
+		font-size: 1.5em;
+		color: $secondary-clr;
+		float: none;
+		margin: 24px auto 0;
+	}
+}
+ul.benefitsList{	
+	margin: 0;
+	padding: 0;	
+	margin-bottom:50px;
+	font-size: 1.25em;
+	li{
+		padding-bottom: 18px;
+		list-style-type: none;
+		background: url('../images/tick.png') no-repeat 0 0;
+		padding-left: 50px;
+	}
+}
+.needHelp{
+	margin: 0 auto;
+	float: none;
+	text-align: center;	
+	font-size: 1.125em;	
+	background: $primary-clr;
+	padding: 40px 0;
+	font-size: 1.5em;
+	
+	h3{
+		background: url('../images/callnow.png') no-repeat center top;
+		padding-top: 61px;
+		font-size: 1.5em;
+		font-weight: normal;
+		margin: 13px 0 0;
+		background-size: 44px;
+		background-size: inherit;
+	}
+}
+
+.pageFooter{
+	border-top: 1px solid #5a5b60;
+	margin-top: 65px;
+	text-align: center;
+	font-size: 1.25em;
+	color: #6d6d72;
+	padding: 20px 0;
+
+	p{
+		margin: 10px 0;
+	}
+	ul{
+		margin: 0;
+		li{
+			list-style-type: none;
+			display: inline;
+			a{
+				padding: 10px;
+			}
+			&+li{
+				border-left: 1px solid #6d6d72;
+			}
+		}
+	}
+}
+
+/*Expenses Page sass*/
+
+.flexi_thanks{
+	font-size: 1.5em;
+	margin-bottom: 65px;
+	text-align: center;
+}
+.expenseFrm{
+	margin-bottom: 72px;
+	font-size: $frm_txt_sml;
+	@include clearfix();
+	.row.form-group:last-child{
+		margin-bottom: 0;
+	}
+	p{
+		margin: 0 0 15px;
+		line-height: 28px;
+	}
+	.radioGroup{
+		p{
+			margin-bottom: 10px;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+}
+
+label{	
+	font-weight: normal;
+	&.lbl_right_algn{
+		text-align: right;
+		line-height: 45px;
+		padding-right: 24px;
+	}
+	&.frmLbl{
+		font-size: $frm_lbl_sml;
+		font-family: 'OpenSans-Bold';
+	}
+}
+
+input[type="text"]{
+	@include flexi_txt();
+	font-size: $frm_lbl_sml;
+	&.total{
+		-moz-box-shadow: inset 0px 0px 0 6px $secondary-clr;
+		-webkit-box-shadow: inset 0px 0px 0 6px $secondary-clr;
+		box-shadow: inset 0px 0px 0 6px $secondary-clr;
+	}
+}
+input[type="radio"]{
+	@include radioBtn();
+	width: 30px;
+	height: 30px;
+}
+.flexi_actionBtns{
+	margin-top: 8px;
+	a{
+		font-size: 1.125em;
+		line-height: 52px;
+	}
+	.btn{
+		@include actionBtn();
+	}
+}
+
+
+@media (min-width: $screen-sm-min) { 
+	body{
+		padding: 0;
+	}
+	h1{
+		&.siteLogo{
+			margin-bottom: 50px;
+		}
+	}
+	.pageFooter{
+		margin-top: 95px;
+		font-size: 0.9375em;
+		&.frmFooter{
+			margin-top: 40px;
+		}
+	}
+	ul.benefitsList{
+		margin-bottom: 0;
+		font-size: 1.125em;
+	}
+	.needHelp{
+		font-size: 1.125em;	
+		h3{
+			font-size: 2em;
+			padding-top: 56px;
+			margin: 10px 0 0;
+		}	
+	}
+	.align_mdl_sml{
+		float: left;
+	}
+	.flexi_info{
+		font-size: 1.625em;
+		p:nth-child(1){
+			margin-bottom: 0;
+		}
+	}
+	.resumeApp{
+		font-size: 1.125em !important;
+	}
+	.expenseFrm{
+		font-size: $frm_txt;
+		p{
+			line-height: 24px;
+		}
+	}
+	label.frmLbl{
+		font-size: $frm_lbl;
+	}
+	input[type="text"]{
+		font-size: $frm_lbl;
+	}
+	input[type="radio"]{
+		width: 25px;
+		height: 25px;
+	}
+
+	.flexi_nav{
+		ol{
+			@include clearfix();			
+			border-radius: 30px;
+			overflow: hidden;
+			margin: 0;
+			padding: 0;
+			li{
+				float: left;
+				width: 25%;
+				background: $blk-clr;
+				text-align: center;
+			}
+		}
+	}
+}

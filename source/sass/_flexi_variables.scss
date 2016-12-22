@@ -1,0 +1,114 @@
+@font-face {
+font-family: 'OpenSans';
+src: url('../fonts/OpenSans.eot?#iefix') format('embedded-opentype'),  
+url('../fonts/OpenSans.woff') format('woff'), 
+url('../fonts/OpenSans.ttf')  format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+@font-face {
+font-family: 'OpenSans-Bold';
+src: url('../fonts/OpenSans-Bold.eot?#iefix') format('embedded-opentype'),  
+url('../fonts/OpenSans-Bold.woff') format('woff'), 
+url('../fonts/OpenSans-Bold.ttf')  format('truetype');
+font-weight: normal;
+font-style: normal;
+}
+
+$body-bg: #111820;
+$base-fnt-clr: #fff;
+$font-family: 'OpenSans' !default;
+$font-family-bold: 'OpenSans-Bold' !default;
+$base-fnt: 16px;
+$frm_lbl: 1.25em;
+$frm_lbl_sml: 1.10em;
+$frm_txt: 1em;
+$frm_txt_sml: 1.375em;
+
+$primary-clr: #293037;
+$secondary-clr: #1fcbb0;
+$secondaryAlt-clr: #4cd5c0;
+$grey-clr: #ebebeb;
+$blk-clr: #000;
+
+.mrgn_t10{
+	margin-top: 10px;	
+}
+.mrgn_t15{
+	margin-top: 15px;	
+}
+.mrgn_t20{
+	margin-top: 20px;	
+}
+
+@mixin actionBtn(){
+	border-radius: 30px;	
+	font-size: 1.75em;
+	color: $base-fnt-clr;
+	background: $secondary-clr;
+	height: auto;	
+	&:hover, &:focus{
+		background: $base-fnt-clr;
+		color: $secondary-clr;
+		box-shadow: none;
+		outline: none;
+	}
+}
+
+@mixin flexi_txt(){
+	border-radius: 0;
+	height: 50px;
+	-moz-box-shadow: inset 0px 0px 0 6px $grey-clr;
+	-webkit-box-shadow: inset 0px 0px 0 6px $grey-clr;
+	box-shadow: inset 0px 0px 0 6px $grey-clr;
+	color: #000;
+	margin: 0;
+	border: 0;
+	padding-left: 20px;
+	padding-right: 20px;
+	&:focus{
+		border: 0;
+		-moz-box-shadow: inset 0px 0px 0 6px $grey-clr;
+		-webkit-box-shadow: inset 0px 0px 0 6px $grey-clr;
+		box-shadow: inset 0px 0px 0 6px $grey-clr;
+	}
+}
+
+@mixin radioBtn(){		
+	margin-right: 9px;
+	margin-top: -3px;
+	vertical-align: middle;
+	&:focus{
+		outline: none;
+	}
+	&:checked:before {
+		content: "";
+		display: block;
+		margin: 20%; 
+		width: 60%;
+		height: 60%;
+		border-radius: 50%;
+		background: $secondary-clr;
+	}
+}
+
+@mixin primaryBtn_grad(){
+	border-radius: 10px;
+	border: transparent;
+	background: $secondary-clr;
+
+	background: -moz-linear-gradient(top, $secondaryAlt-clr 0%, $secondaryAlt-clr 50%, $secondary-clr 51%, $secondary-clr 100%);
+	
+	background: -webkit-gradient(left top, left bottom, color-stop(0%, $secondaryAlt-clr), color-stop(50%, $secondaryAlt-clr), color-stop(51%, $secondary-clr), color-stop(100%, $secondary-clr));
+	
+	background: -webkit-linear-gradient(top, $secondaryAlt-clr 0%, $secondaryAlt-clr 50%, $secondary-clr 51%, $secondary-clr 100%);
+	
+	background: -o-linear-gradient(top, $secondaryAlt-clr 0%, $secondaryAlt-clr 50%, $secondary-clr 51%, $secondary-clr 100%);
+	
+	background: -ms-linear-gradient(top, $secondaryAlt-clr 0%, $secondaryAlt-clr 50%, $secondary-clr 51%, $secondary-clr 100%);
+	
+	background: linear-gradient(to bottom, $secondaryAlt-clr 0%, $secondaryAlt-clr 50%, $secondary-clr 51%, $secondary-clr 100%);
+
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='$secondaryAlt-clr', endColorstr='#1fcbb1', GradientType=0 );
+}
