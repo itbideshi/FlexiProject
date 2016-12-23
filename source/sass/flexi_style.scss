@@ -222,13 +222,29 @@ input[type="radio"]{
 		@include clearfix();			
 		border-radius: 30px;
 		overflow: hidden;
-		margin: 0;
+		margin: 0 0 32px;
 		padding: 0;
 		li{
+			list-style-type: none;
 			float: left;
 			width: 25%;
 			background: $blk-clr;
 			text-align: center;
+			height: 60px;
+			line-height: 60px;			
+			overflow: hidden;
+			font-size: 0.875em;
+			a, a:hover{
+				color: $nav-clr;
+			}
+			&.done, &.active{
+				background: $nav-activeBG;
+			}
+			&.active{
+				a, a:hover{
+					color: $base-fnt-clr;
+				}
+			}
 		}
 	}
 }
@@ -239,7 +255,7 @@ input[type="radio"]{
 	}
 	h1{
 		&.siteLogo{
-			margin-bottom: 50px;
+			margin-bottom: 38px;
 		}
 	}
 	.pageFooter{
@@ -284,6 +300,14 @@ input[type="radio"]{
 	input[type="radio"]{
 		width: 25px;
 		height: 25px;
+	}
+
+	.flexi_nav{
+		ul{
+			li{
+				font-size: 1.125em;
+			}			
+		}
 	}
 
 	

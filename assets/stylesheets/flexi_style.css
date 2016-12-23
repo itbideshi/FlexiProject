@@ -2598,7 +2598,7 @@ input[type="radio"] {
 .flexi_nav ul {
   border-radius: 30px;
   overflow: hidden;
-  margin: 0;
+  margin: 0 0 32px;
   padding: 0; }
   .flexi_nav ul:before, .flexi_nav ul:after {
     content: " ";
@@ -2606,16 +2606,27 @@ input[type="radio"] {
   .flexi_nav ul:after {
     clear: both; }
   .flexi_nav ul li {
+    list-style-type: none;
     float: left;
     width: 25%;
     background: #000;
-    text-align: center; }
+    text-align: center;
+    height: 60px;
+    line-height: 60px;
+    overflow: hidden;
+    font-size: 0.875em; }
+    .flexi_nav ul li a, .flexi_nav ul li a:hover {
+      color: #747474; }
+    .flexi_nav ul li.done, .flexi_nav ul li.active {
+      background: #2e2d2e; }
+    .flexi_nav ul li.active a, .flexi_nav ul li.active a:hover {
+      color: #fff; }
 
 @media (min-width: 768px) {
   body {
     padding: 0; }
   h1.siteLogo {
-    margin-bottom: 50px; }
+    margin-bottom: 38px; }
   .pageFooter {
     font-size: 0.9375em; }
   ul.benefitsList {
@@ -2645,4 +2656,6 @@ input[type="radio"] {
     font-size: 1.25em; }
   input[type="radio"] {
     width: 25px;
-    height: 25px; } }
+    height: 25px; }
+  .flexi_nav ul li {
+    font-size: 1.125em; } }
