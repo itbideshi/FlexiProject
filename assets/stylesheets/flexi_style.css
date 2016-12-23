@@ -2526,6 +2526,9 @@ ul.benefitsList {
   .expenseFrm .radioGroup li:last-child {
     margin-bottom: 0; }
 
+.decisionCont {
+  margin-bottom: 45px; }
+
 label {
   font-weight: normal; }
   label.lbl_right_algn {
