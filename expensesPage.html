@@ -3,27 +3,42 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<title>Flexi Intro</title>
+	<title>Flexi Expenses Page</title>
 	<link rel="stylesheet" href="assets/stylesheets/flexi_style.css" />
 </head>
 <body>
 	<div class="container">
-		<div class="row">
+		
+		<!-- header starts here -->
+		<header class="row">
 			<h1 class="siteLogo col-xs-12">
 				<img src="assets/images/flexi_logo.png" alt="Flexi-FI finance made simple" />
 			</h1>
-			<!-- <nav class="flexi_nav col-sm-6 align_mdl">
-				 <ol>
-				 	<li>Income</li>
-				 	<li>Expenses</li>
-				 	<li>About you</li>
-				 	<li>Decision</li>
-				 </ol>
-			</nav> -->
+		</header>
+		<!-- header ends here -->
+
+		<!-- Page Navigation starts here -->
+		<!-- <div class="row">
+			<nav class="flexi_nav col-sm-6 align_mdl">
+				 <ul>
+				 	<li>1. Income</li>
+				 	<li>2. Expenses</li>
+				 	<li>3. About you</li>
+				 	<li>4. Decision</li>
+				 </ul>
+			</nav>
+		</div> -->
+		<!-- Page Navigation ends here -->
+		
+		<!-- Thank you & other messages starts here-->
+		<div class="row">
 			<section class="flexi_thanks col-sm-7 col-md-5 align_mdl">
 				Thank you. Now we’ll need a little information about your expenses.
 			</section>
 		</div>
+		<!-- Thank you & other messages ends here-->
+
+		<!-- Page Content starts here -->
 		<div class="row">
 			<div class="col-sm-7 col-md-6 align_mdl">
 				<div class="form-group expenseFrm">
@@ -40,16 +55,18 @@
 					<label class="frmLbl" for="">Household expenses</label>
 					<p>Please provide details of your household expenses.  It is important to take into account any future increases to expenses you are aware of.</p>
 					<section class="radioGroup">
-						<p>
-							<label for="myExpenses">
-								<input type="radio" id="myExpenses" name="household" /> I know my expenses
-							</label>
-						</p>
-						<p>
-							<label for="neeCalc">
-								<input type="radio" id="neeCalc" name="household" /> Help me, I need a calculator
-							</label>
-						</p>
+						<ul>
+							<li>
+								<label for="myExpenses">
+									<input type="radio" id="myExpenses" name="household" /> I know my expenses
+								</label>
+							</li>
+							<li>
+								<label for="neeCalc">
+									<input type="radio" id="neeCalc" name="household" /> Help me, I need a calculator
+								</label>
+							</li>
+						</ul>						
 					</section>
 					<div class="mrgn_t15">
 						<div class="row form-group">
@@ -131,16 +148,18 @@
 					<label class="frmLbl" for="">Monthly financial obligations</label>
 					<p>Do you have any finance such as credit cards, loans or leases where you are the primary account holder?</p>
 					<section class="radioGroup">
-						<p>
-							<label for="noFinance">
-								<input type="radio" id="noFinance" name="finance" /> I don’t have any finance currently
-							</label>
-						</p>
-						<p>
-							<label for="yesFinance">
-								<input type="radio" id="yesFinance" name="finance" /> I have other finance
-							</label>
-						</p>
+						<ul>
+							<li>
+								<label for="noFinance">
+									<input type="radio" id="noFinance" name="finance" /> I don’t have any finance currently
+								</label>
+							</li>
+							<li>
+								<label for="yesFinance">
+									<input type="radio" id="yesFinance" name="finance" /> I have other finance
+								</label>
+							</li>
+						</ul>
 					</section>
 				</div>
 
@@ -148,16 +167,18 @@
 					<label class="frmLbl" for="">Relationship &amp; dependents</label>
 					<p>Do you have a wife or significant other person who contributes to your household income? Or children you are obligated to make financial payments to?</p>
 					<section class="radioGroup">
-						<p>
-							<label for="yesSpouse">
-								<input type="radio" id="yesSpouse" name="spouse" /> I have a spouse
-							</label>
-						</p>
-						<p>
-							<label for="noSpouse">
-								<input type="radio" id="noSpouse" name="spouse" /> I do not have a spouse
-							</label>
-						</p>
+						<ul>
+							<li>
+								<label for="yesSpouse">
+									<input type="radio" id="yesSpouse" name="spouse" /> I have a spouse
+								</label>
+							</li>
+							<li>
+								<label for="noSpouse">
+									<input type="radio" id="noSpouse" name="spouse" /> I do not have a spouse
+								</label>
+							</li>
+						</ul>
 					</section>
 					<div class="mrgn_t15">
 						<div class="row form-group">
@@ -176,7 +197,9 @@
 				</div>
 			</div>
 		</div>
+		<!-- Page Content ends here -->
 		
+		<!-- Form action buttons starts here -->
 		<div class="row">
 			<div class="col-sm-7 col-md-6 align_mdl flexi_actionBtns">
 				<div class="row">
@@ -186,7 +209,9 @@
 				</div>
 			</div>
 		</div>
-
+		<!-- Form action buttons ends here -->
+		
+		<!-- Footer starts here -->
 		<footer class="pageFooter frmFooter">
 			<ul>
 				<li><a href="#">Privacy</a></li>
@@ -196,6 +221,7 @@
 			</ul>
 			<p>&copy; Copyright Flexi Group 2016</p>
 		</footer>
+		<!-- Footer ends here -->
 
 	</div>
 	<script src="assets/js/flexi_JS.js"></script>
