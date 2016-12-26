@@ -254,6 +254,47 @@ input[type="radio"]{
 	margin-bottom: 65px;
 	text-align: center;	
 }
+
+
+.flexi_heading{
+	font-size: 1.625em;
+	margin-bottom: 30px;
+	text-align: center;
+}
+
+.privacyTxtCont 
+{
+	margin-bottom:60px;
+
+	.frmLbl 
+	{
+		font-size:18px;
+		margin-bottom:10px;
+	}
+
+	ul.info {
+		margin-top:20px;
+		padding:0px;
+		label 
+		{
+		  width:70px;
+
+		}
+		li 
+		{
+		  list-style-type:none;
+		  margin-bottom:15px;
+
+		  span 
+		  {
+		  	
+		  }
+		}
+	}	
+}
+
+
+
 .expenseFrm, .pageFrm{
 	margin-bottom: 72px;
 	@include clearfix();
