@@ -14,6 +14,10 @@ h1{
 		float: none;
 		text-align: center;
 		margin: 50px auto 60px;
+		img{
+			@extend .img-responsive;
+			margin:0 auto;
+		}
 	}
 }
 .align_mdl, .align_mdl_sml{
@@ -108,7 +112,7 @@ a, a:focus{
 		-moz-transform: translateX(-50%);
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%);
-		margin-top: 25px;
+		margin-top: 26px;
 		width: 100%;
 		padding: 34px 30px;
 		z-index: 999;
@@ -198,6 +202,33 @@ ul.benefitsList{
 }
 
 /*Expenses Page sass*/
+.frm-label{
+	@include make-xs-column(6);
+}
+.frm-label-lg{
+	@include make-xs-column(12);
+}
+.frm-cntrl{
+	@include make-xs-column(6);	
+}
+.frm-cntrl-lg{
+	@include make-xs-column(12);	
+}
+input[type="text"]{
+	@extend .form-control;
+	@include flexi_txt();
+	font-size: $frm_lbl_sml;
+	&.total{
+		-moz-box-shadow: inset 0px 0px 0 6px $secondary-clr;
+		-webkit-box-shadow: inset 0px 0px 0 6px $secondary-clr;
+		box-shadow: inset 0px 0px 0 6px $secondary-clr;
+	}
+}
+input[type="radio"]{
+	@include radioBtn();
+	width: 30px;
+	height: 30px;
+}
 
 .flexi_thanks{
 	font-size: 1.5em;
@@ -248,20 +279,7 @@ label{
 	}
 }
 
-input[type="text"]{
-	@include flexi_txt();
-	font-size: $frm_lbl_sml;
-	&.total{
-		-moz-box-shadow: inset 0px 0px 0 6px $secondary-clr;
-		-webkit-box-shadow: inset 0px 0px 0 6px $secondary-clr;
-		box-shadow: inset 0px 0px 0 6px $secondary-clr;
-	}
-}
-input[type="radio"]{
-	@include radioBtn();
-	width: 30px;
-	height: 30px;
-}
+
 .flexi_actionBtns{
 	margin-top: 8px;
 	a{
@@ -290,16 +308,12 @@ input[type="radio"]{
 			line-height: 60px;			
 			overflow: hidden;
 			font-size: 0.875em;
-			a, a:hover{
-				color: $nav-clr;
-			}
+			color: $nav-clr;
 			&.done, &.active{
 				background: $nav-activeBG;
 			}
 			&.active{
-				a, a:hover{
-					color: $base-fnt-clr;
-				}
+				color: $base-fnt-clr;
 			}
 		}
 	}
@@ -312,6 +326,7 @@ input[type="radio"]{
 	h1{
 		&.siteLogo{
 			margin-bottom: 38px;
+
 		}
 	}
 	.pageFooter{
