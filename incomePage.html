@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Flexi Income Page</title>
+	<link rel="stylesheet" href="assets/stylesheets/flexi_style.css" />
+</head>
+<body>
+	<div class="container">
+		
+		<!-- header starts here -->
+		<header class="row">
+			<h1 class="siteLogo col-xs-12">
+				<img src="assets/images/flexi_logo.png" alt="Flexi-FI finance made simple" />
+			</h1>
+		</header>
+		<!-- header ends here -->
+
+		<!-- Page Navigation starts here -->
+		<div class="row">
+			<nav class="flexi_nav col-sm-7 align_mdl">
+				 <ul>
+				 	<li class="active">1. Income</li>
+				 	<li>2. Expenses</li>
+				 	<li>3. About you</li>
+				 	<li>4. Decision</li>
+				 </ul>
+			</nav>
+		</div>
+		<!-- Page Navigation ends here -->
+		
+		<!-- Thank you & other messages starts here-->
+		<div class="row">
+			<section class="flexi_thanks align_mdl">
+				Welcome to FLEXI-FI. Let's get started
+			</section>
+		</div>
+		<!-- Thank you & other messages ends here-->
+
+		<!-- Page Content starts here -->
+		<div class="row">
+			<div class="col-sm-7 col-md-6 align_mdl">
+				<div class="form-group pageFrm">
+					<label class="frmLbl">Value of goods you wish to purchase?
+</label>
+					<div class="row">
+						<div class="frm-cntrl">
+							<input type="text" value="€2000" />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group pageFrm">
+					<label class="frmLbl">Employment and Main Source of Income</label>
+					<p>Please provide details of your income monthly and after tax. It is important to take into account any future decreases to your income that you know about.</p>
+					<div class="row form-group">
+						<div class="frm-cntrl-lg">
+							<select>
+								<option value="">Full Time</option>
+								<option value="">Part Time</option>
+								<option value="">Self Employed</option>
+								<option value="">Not Employed</option>
+								<option value="">Retire</option>
+								<option value="">Student</option>
+							</select>
+						</div>
+					</div>
+					<div id="fullTime">
+						<div class="row form-group">
+							<label for="" class="frm-label-lg">Name of Employer</label>
+							<div class="frm-cntrl">
+								<input type="text" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="" class="frm-label-lg">Monthly Income (after tax)</label>
+							<div class="frm-cntrl">
+								<input type="text" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="" class="frm-label-lg">Length of time with that employer</label>
+							<div class="frm-cntrl">
+								<select name="" id="">
+									<option value="">select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group pageFrm">
+					<label class="frmLbl">Previous Employment and Income</label>
+					<p>Please provide details of your previous employment and monthly income (after tax).</p>
+					<div class="row form-group">
+						<div class="frm-cntrl-lg">
+							<select>
+								<option value="">Full Time</option>
+								<option value="">Part Time</option>
+								<option value="">Self Employed</option>
+								<option value="">Not Employed</option>
+								<option value="">Retire</option>
+								<option value="">Student</option>
+							</select>
+						</div>
+					</div>
+					<div id="prev_fullTime">
+						<div class="row form-group">
+							<label for="" class="frm-label-lg">Name of Employer</label>
+							<div class="frm-cntrl">
+								<input type="text" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="" class="frm-label-lg">Monthly Income (after tax)</label>
+							<div class="frm-cntrl">
+								<input type="text" />
+							</div>
+						</div>
+						<div class="row form-group">
+							<label for="" class="frm-label-lg">Length of time with that employer</label>
+							<div class="frm-cntrl">
+								<select name="" id="">
+									<option value="">select</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+				<div class="form-group pageFrm">
+					<label class="frmLbl" for="">Other Material Sources of Income</label>
+					<p>If you receive income from other sources, please provide monthly amounts (after tax)</p>
+					<section class="radioGroup">
+						<ul>
+							<li>
+								<label for="noFinance">
+									<input type="radio" id="noFinance" name="finance" /> No other income
+								</label>
+							</li>
+							<li>
+								<label for="yesFinance">
+									<input type="radio" id="yesFinance" name="finance" /> Other income
+								</label>
+							</li>
+						</ul>
+					</section>
+					<div class="mrgn_t15">
+						<div class="row form-group">
+							<label class="frm-label lbl_right_algn">
+								Employment
+							</label>
+							<div class="frm-cntrl">
+								<input type="text">
+							</div>
+						</div>					
+						<div class="row form-group">
+							<label class="frm-label lbl_right_algn">
+								Self Employment
+							</label>
+							<div class="frm-cntrl">
+								<input type="text">
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="frm-label lbl_right_algn">
+								Shares
+							</label>
+							<div class="frm-cntrl">
+								<input type="text">
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="frm-label lbl_right_algn">
+								Investment Property
+							</label>
+							<div class="frm-cntrl">
+								<input type="text">
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="frm-label lbl_right_algn">
+								Benefits
+							</label>
+							<div class="frm-cntrl">
+								<input type="text">
+							</div>
+						</div>
+						<div class="row form-group">
+							<label class="frm-label lbl_right_algn">
+								Other
+							</label>
+							<div class="frm-cntrl">
+								<input type="text">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Page Content ends here -->
+		
+		<!-- Form action buttons starts here -->
+		<div class="row">
+			<div class="col-sm-7 col-md-6 align_mdl flexi_actionBtns">
+				<div class="row">
+					<div class="col-xs-3 col-sm-4"></div>
+					<div class="col-xs-6 col-sm-4"><button class="btn primary-btn form-control">Next</button></div>
+					<div class="col-xs-3 col-sm-4 text-right"><a href="#">Save</a></div>
+				</div>
+			</div>
+		</div>
+		<!-- Form action buttons ends here -->
+		
+		<!-- Footer starts here -->
+		<footer class="pageFooter frmFooter">
+			<ul>
+				<li><a href="#">Privacy</a></li>
+				<li><a href="#">Terms &amp; Conditions</a></li>
+				<li><a href="#">About us</a></li>
+				<li><a href="#">Contact us</a></li>
+			</ul>
+			<p>&copy; Copyright Flexi Group 2016</p>
+		</footer>
+		<!-- Footer ends here -->
+
+	</div>
+	<script src="assets/js/flexi_JS.js"></script>
+</body>
+</html>
