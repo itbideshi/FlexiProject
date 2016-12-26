@@ -21,7 +21,7 @@ h1{
 	}
 }
 .align_mdl, .align_mdl_sml{
-	float: none;
+	float: none !important;
 	margin: 0 auto;
 }
 a, a:focus{
@@ -34,7 +34,7 @@ a, a:focus{
 }
 
 .flexi_info{
-	font-size: 1.875em;
+	font-size: $fnt26;
 	text-align: center;
 	p{
 		margin: 0 0 10px;
@@ -52,7 +52,7 @@ a, a:focus{
 	.reqElem{
 		padding-top: 85px;
 		text-align: center;
-		font-size: 1.5em;
+		font-size: $fnt24;
 		margin-top: 6px;
 		margin-bottom: 43px;
 	}
@@ -72,7 +72,7 @@ a, a:focus{
 		.btn{
 			width: 100%;
 			line-height: 68px;
-			font-size: 2.1875em;
+			font-size: $fnt35;
 			@include primaryBtn_grad();
 			&:focus{
 				outline: none;
@@ -82,7 +82,7 @@ a, a:focus{
 }
 .resumeApp{
 	text-align: center;
-	font-size: 1.5em;
+	font-size: $fnt18;
 	color: $secondary-clr;
 	float: none;
 	margin: 24px auto 0;
@@ -117,7 +117,7 @@ a, a:focus{
 		padding: 34px 30px;
 		z-index: 999;
 		color: $resumeOverlay_txt;
-		font-size: 1.11em;
+		font-size: $fnt20;
 		box-shadow: 6px 6px 0px -2px $overlay_shadow;
 
 		.overlayCntrls{
@@ -132,7 +132,7 @@ a, a:focus{
 				@include primaryBtn_grad();
 				margin-bottom: 15px;
 				color: $base-fnt-clr;
-				font-size: 1.33em;
+				font-size: $fnt24;
 				height: auto;
 				outline: none;
 				&:hover, &:focus{
@@ -146,7 +146,7 @@ ul.benefitsList{
 	margin: 0;
 	padding: 0;	
 	margin-bottom:50px;
-	font-size: 1.25em;
+	font-size: $fnt20
 	li{
 		padding-bottom: 18px;
 		list-style-type: none;
@@ -158,15 +158,14 @@ ul.benefitsList{
 	margin: 0 auto;
 	float: none;
 	text-align: center;	
-	font-size: 1.125em;	
+	font-size: $fnt24;	
 	background: $primary-clr;
 	padding: 40px 0;
-	font-size: 1.5em;
 	
 	h3{
 		background: url('../images/callnow.png') no-repeat center top;
 		padding-top: 61px;
-		font-size: 1.5em;
+		font-size: $fnt36;
 		font-weight: normal;
 		margin: 13px 0 0;
 		background-size: 44px;
@@ -179,7 +178,7 @@ ul.benefitsList{
 	border-top: 1px solid #5a5b60;
 	margin-top: 65px;
 	text-align: center;
-	font-size: 1.25em;
+	font-size: $fnt20;
 	color: #6d6d72;
 	padding: 20px 0;
 
@@ -214,10 +213,28 @@ ul.benefitsList{
 .frm-cntrl-lg{
 	@include make-xs-column(12);	
 }
+select{
+		@extend .form-control;
+		@include flexi_txt();
+		-moz-box-shadow: none;
+		-webkit-box-shadow: none;
+		box-shadow: none;
+		font-size: $fnt24;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		appearance: none;
+		background: #fff url(../images/right_arrw.png) no-repeat calc(100% - 15px) center;
+		&:focus{
+			-moz-box-shadow: none;
+			-webkit-box-shadow: none;
+			box-shadow: none;
+		}
+}
+
 input[type="text"]{
 	@extend .form-control;
 	@include flexi_txt();
-	font-size: $frm_lbl_sml;
+	font-size: $fnt24;
 	&.total{
 		-moz-box-shadow: inset 0px 0px 0 6px $secondary-clr;
 		-webkit-box-shadow: inset 0px 0px 0 6px $secondary-clr;
@@ -231,13 +248,14 @@ input[type="radio"]{
 }
 
 .flexi_thanks{
-	font-size: 1.5em;
+	@include make-sm-column(7);
+	@include make-md-column(6);
+	font-size: $fnt24;
 	margin-bottom: 65px;
-	text-align: center;
+	text-align: center;	
 }
-.expenseFrm{
+.expenseFrm, .pageFrm{
 	margin-bottom: 72px;
-	font-size: $frm_txt_sml;
 	@include clearfix();
 	.row.form-group:last-child{
 		margin-bottom: 0;
@@ -246,18 +264,19 @@ input[type="radio"]{
 		margin: 0 0 15px;
 		line-height: 28px;
 	}
-	.radioGroup{
-		ul{
-			margin: 0;
-			padding: 0;
-		}
-		li{
-			list-style-type: none;
-			margin-bottom: 10px;
-		}
-		li:last-child{
-			margin-bottom: 0;
-		}
+	
+}
+.radioGroup{
+	ul{
+		margin: 0;
+		padding: 0;
+	}
+	li{
+		list-style-type: none;
+		margin-bottom: 10px;
+	}
+	li:last-child{
+		margin-bottom: 0;
 	}
 }
 
@@ -274,7 +293,7 @@ label{
 		padding-right: 24px;
 	}
 	&.frmLbl{
-		font-size: $frm_lbl_sml;
+		font-size: $fnt24;
 		font-family: 'OpenSans-Bold';
 	}
 }
@@ -283,7 +302,7 @@ label{
 .flexi_actionBtns{
 	margin-top: 8px;
 	a{
-		font-size: 1.125em;
+		font-size: $fnt18;
 		line-height: 52px;
 	}
 	.btn{
@@ -307,7 +326,7 @@ label{
 			height: 60px;
 			line-height: 60px;			
 			overflow: hidden;
-			font-size: 0.875em;
+			font-size: $fnt18;
 			color: $nav-clr;
 			&.done, &.active{
 				background: $nav-activeBG;
@@ -330,16 +349,16 @@ label{
 		}
 	}
 	.pageFooter{
-		font-size: 0.9375em;
+		font-size: $fnt15;
 	}
 	ul.benefitsList{
 		margin-bottom: 0;
-		font-size: 1.125em;
+		font-size: $fnt18;
 	}
 	.needHelp{
-		font-size: 1.125em;	
+		font-size: $fnt18;
 		h3{
-			font-size: 2em;
+			font-size: $fnt36;
 			padding-top: 56px;
 			margin: 10px 0 0;
 		}	
@@ -348,26 +367,26 @@ label{
 		float: left;
 	}
 	.flexi_info{
-		font-size: 1.625em;
+		font-size: $fnt26;
 		p:nth-child(1){
 			margin-bottom: 0;
 		}
 	}
 	.resumeApp{
-		font-size: 1.125em !important;
+		font-size: $fnt18 !important;
 	}
 	.expenseFrm{
-		font-size: $frm_txt;
 		p{
 			line-height: 24px;
 		}
 	}
 	label.frmLbl{
-		font-size: $frm_lbl;
+		font-size: $fnt20;
 	}
-	input[type="text"]{
-		font-size: $frm_lbl;
+	input[type="text"], select{
+		font-size: $fnt20;
 	}
+
 	input[type="radio"]{
 		width: 25px;
 		height: 25px;
@@ -376,7 +395,7 @@ label{
 	.flexi_nav{
 		ul{
 			li{
-				font-size: 1.125em;
+				font-size: $fnt18;
 			}			
 		}
 	}
