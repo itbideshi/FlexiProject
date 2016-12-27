@@ -62,6 +62,6 @@ function custom_select(){
 
 
 
-$(function(){
+(function($){
 	custom_select();
-});
+})(jQuery);
