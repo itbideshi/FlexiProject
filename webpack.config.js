@@ -24,9 +24,9 @@ module.exports = {
 	},
 	plugins:[
 		new extractWebpack("stylesheets/flexi_style.css"),
-		/*new webpack.ProvidePlugin({
+		new webpack.ProvidePlugin({
 			$: "jquery",
 			jQuery: "jquery"
-		})*/
+		})
 	]
 }
