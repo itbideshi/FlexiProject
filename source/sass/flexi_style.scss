@@ -213,22 +213,55 @@ ul.benefitsList{
 .frm-cntrl-lg{
 	@include make-xs-column(12);	
 }
-select{
-		@extend .form-control;
-		@include flexi_txt();
-		-moz-box-shadow: none;
-		-webkit-box-shadow: none;
-		box-shadow: none;
+.selectBox_container{
+	@extend .form-control;
+	@include flexi_txt();	
+	font-size: $fnt24;	
+	position: relative;
+	line-height: 40px;
+	cursor: pointer;
+	box-shadow: none;
+	&:after{
+		content:"";
+		display: inline-block;
+		position: absolute;
+		background: #fff url(../images/right_arrw.png) no-repeat center;
+		width: 28px;
+		height: 28px;
+		right: 16px;
+		top: 50%;
+		transform-origin: 14px 14px;
+		-moz-transform: translateY(-50%);
+		-webkit-transform: translateY(-50%);
+		transform: translateY(-50%);
+	}
+	&.opened:after{
+		transform-origin: 18px 8px;
+		transform: rotate(90deg);
+	}	
+}
+
+ul.options_container{
+	padding: 0; 
+	margin: 0;
+	list-style-type: none;
+	background: $base-fnt-clr;
+	color: $blk-clr;
+	width: calc(100% - 20px);
+	position: absolute;
+	z-index:99;
+	display: none;
+	li{
+		height: 58px;
+		line-height: 58px;
+		padding-left: 42px;
 		font-size: $fnt24;
-		-webkit-appearance: none;
-		-moz-appearance: none;
-		appearance: none;
-		background: #fff url(../images/right_arrw.png) no-repeat calc(100% - 15px) center;
-		&:focus{
-			-moz-box-shadow: none;
-			-webkit-box-shadow: none;
-			box-shadow: none;
+		cursor: pointer;
+		&:hover, &.selected{
+			background: #f0f0f0;
 		}
+
+	}
 }
 
 input[type="text"]{
@@ -240,11 +273,25 @@ input[type="text"]{
 		-webkit-box-shadow: inset 0px 0px 0 6px $secondary-clr;
 		box-shadow: inset 0px 0px 0 6px $secondary-clr;
 	}
+	&.error{
+		-moz-box-shadow: inset 0px 0px 0 6px $err_clr;
+		-webkit-box-shadow: inset 0px 0px 0 6px $err_clr;
+		box-shadow: inset 0px 0px 0 6px $err_clr;
+	}
 }
 input[type="radio"]{
 	@include radioBtn();
 	width: 30px;
 	height: 30px;
+}
+
+.errMsg{
+	color: $err_clr;
+	font-size: $fnt24;
+	display: block;
+	margin-top: 5px;
+	float: left;
+	padding: 0 10px;
 }
 
 .flexi_thanks{
@@ -296,7 +343,7 @@ input[type="radio"]{
 
 
 .expenseFrm, .pageFrm{
-	margin-bottom: 72px;
+	margin-bottom: 40px;
 	@include clearfix();
 	.row.form-group:last-child{
 		margin-bottom: 0;
@@ -421,6 +468,9 @@ label{
 			line-height: 24px;
 		}
 	}
+	.expenseFrm, .pageFrm{
+		margin-bottom: 72px;
+	}
 	label.frmLbl{
 		font-size: $fnt20;
 	}
@@ -439,6 +489,18 @@ label{
 				font-size: $fnt18;
 			}			
 		}
+	}
+
+	ul.options_container{
+		li{
+			font-size: $fnt20;
+		}
+	}
+	.selectBox_container{
+		font-size: $fnt20;
+	}
+	.errMsg{
+		font-size: $fnt20;	
 	}
 
 	
