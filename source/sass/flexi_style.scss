@@ -125,12 +125,11 @@ a, a:focus{
 			margin: 30px 0 15px;
 			input[type="text"]{
 				box-shadow: none;
-				margin-bottom: 15px;
 			}
 
 			button{
 				@include primaryBtn_grad();
-				margin-bottom: 15px;
+				margin-top: 20px;
 				color: $base-fnt-clr;
 				font-size: $fnt24;
 				height: auto;
@@ -465,6 +464,13 @@ label{
 	}
 	.resumeApp{
 		font-size: $fnt18 !important;
+		.resumeApp_overlay {
+			.overlayCntrls{
+				button{
+					margin-top: 0;
+				}
+			}
+		}		
 	}
 	.expenseFrm{
 		p{
