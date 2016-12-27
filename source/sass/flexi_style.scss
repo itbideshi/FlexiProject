@@ -146,7 +146,7 @@ ul.benefitsList{
 	margin: 0;
 	padding: 0;	
 	margin-bottom:50px;
-	font-size: $fnt20
+	font-size: $fnt20;
 	li{
 		padding-bottom: 18px;
 		list-style-type: none;
@@ -452,7 +452,7 @@ label{
 		}	
 	}
 	.align_mdl_sml{
-		float: left;
+		float: left !important;
 	}
 	.flexi_info{
 		font-size: $fnt26;
