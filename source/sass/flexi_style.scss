@@ -87,8 +87,65 @@ a, a:focus{
 	float: none;
 	margin: 24px auto 0;
 	position: relative;
-	.resumeApp_overlay{
+	
+}
+.resumeApp_overlay{
+	&:before{
+		content: "";
+		width: 20px;
+		height: 20px;
+		display: block;
+		border: 20px solid $resumeOverlay_bg;
+		border-left-color: transparent;
+		border-right-color: transparent;
+		border-top-color: transparent;
+		position: absolute;
+		top: -40px;
+		left: 50%;
+		-moz-transform: translateX(-50%);
+		-webkit-transform: translateX(-50%);
+		transform: translateX(-50%);
+	}
+	
+	
+	text-align: left;
+	background: $resumeOverlay_bg;
+	position: absolute;
+	left: 50%;
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	transform: translateX(-50%);
+	margin-top: 26px;
+	width: 100%;
+	padding: 34px 30px;
+	z-index: 999;
+	color: $resumeOverlay_txt;
+	font-size: $fnt20;
+	box-shadow: 6px 6px 0px -2px $overlay_shadow;
+
+	.overlayCntrls{
+		@include clearfix();
+		margin: 30px 0 15px;
+		button{
+			@include primaryBtn_grad();
+			margin-top: 20px;
+			color: $base-fnt-clr;
+			font-size: $fnt24;
+			height: auto;
+			outline: none;
+			&:hover, &:focus{
+				box-shadow: none;
+			}
+		}
+	}
+
+	&.upward{
+		bottom: 0;
+		box-shadow: -6px -6px 0px -2px $overlay_shadow;
 		&:before{
+			display: none;
+		}
+		&:after{
 			content: "";
 			width: 20px;
 			height: 20px;
@@ -96,48 +153,13 @@ a, a:focus{
 			border: 20px solid $resumeOverlay_bg;
 			border-left-color: transparent;
 			border-right-color: transparent;
-			border-top-color: transparent;
+			border-bottom-color: transparent;
 			position: absolute;
-			top: -40px;
-			left: 50%;
+			bottom: -40px;
+			right: -10px;
 			-moz-transform: translateX(-50%);
 			-webkit-transform: translateX(-50%);
 			transform: translateX(-50%);
-		}
-		
-		text-align: left;
-		background: $resumeOverlay_bg;
-		position: absolute;
-		left: 50%;
-		-moz-transform: translateX(-50%);
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
-		margin-top: 26px;
-		width: 100%;
-		padding: 34px 30px;
-		z-index: 999;
-		color: $resumeOverlay_txt;
-		font-size: $fnt20;
-		box-shadow: 6px 6px 0px -2px $overlay_shadow;
-
-		.overlayCntrls{
-			@include clearfix();
-			margin: 30px 0 15px;
-			input[type="text"]{
-				box-shadow: none;
-			}
-
-			button{
-				@include primaryBtn_grad();
-				margin-top: 20px;
-				color: $base-fnt-clr;
-				font-size: $fnt24;
-				height: auto;
-				outline: none;
-				&:hover, &:focus{
-					box-shadow: none;
-				}
-			}
 		}
 	}
 }
@@ -219,10 +241,7 @@ select, .selectBox_container{
 	position: relative;
 	line-height: 40px;
 	cursor: pointer;
-	/*-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;*/
-	
+
 	&:after{
 		content:"";
 		display: inline-block;
@@ -241,6 +260,11 @@ select, .selectBox_container{
 		transform-origin: 18px 8px;
 		transform: rotate(90deg);
 	}	
+}
+.selectBox_container{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
 }
 
 ul.options_container{
@@ -266,7 +290,7 @@ ul.options_container{
 	}
 }
 
-input[type="text"]{
+input[type="text"], input[type="tel"]{
 	@extend .form-control;
 	@include flexi_txt();
 	font-size: $fnt24;
@@ -297,6 +321,12 @@ input[type="radio"]{
 	margin-top: 5px;
 	float: left;
 	padding: 0 10px;
+	a{
+		text-decoration: underline;
+	}
+	a:hover{
+		text-decoration: none;
+	}
 }
 
 .flexi_thanks{
@@ -430,6 +460,9 @@ label{
 		}
 	}
 }
+.posRel{
+	position: relative;
+}
 
 @media (min-width: $screen-sm-min) { 
 	body{
@@ -466,14 +499,14 @@ label{
 		}
 	}
 	.resumeApp{
-		font-size: $fnt18 !important;
-		.resumeApp_overlay {
-			.overlayCntrls{
-				button{
-					margin-top: 0;
-				}
+		font-size: $fnt18 !important;				
+	}
+	.resumeApp_overlay {
+		.overlayCntrls{
+			button{
+				margin-top: 0;
 			}
-		}		
+		}
 	}
 	.expenseFrm{
 		p{
@@ -486,7 +519,7 @@ label{
 	label.frmLbl{
 		font-size: $fnt20;
 	}
-	input[type="text"], select{
+	input[type="text"], input[type="tel"], select{
 		font-size: $fnt20;
 	}
 	::-webkit-input-placeholder{
