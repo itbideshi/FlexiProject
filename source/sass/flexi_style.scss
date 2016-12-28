@@ -87,6 +87,7 @@ a, a:focus{
 	float: none;
 	margin: 24px auto 0;
 	position: relative;
+	z-index: 9;
 	
 }
 .resumeApp_overlay{
@@ -118,7 +119,7 @@ a, a:focus{
 	margin-top: 26px;
 	width: 100%;
 	padding: 34px 30px;
-	z-index: 999;
+	z-index: -1;
 	color: $resumeOverlay_txt;
 	font-size: $fnt20;
 	box-shadow: 6px 6px 0px -2px $overlay_shadow;
@@ -161,6 +162,10 @@ a, a:focus{
 			-webkit-transform: translateX(-50%);
 			transform: translateX(-50%);
 		}
+	}
+
+	&.saveLnk{
+		bottom: 60px;
 	}
 }
 ul.benefitsList{	
@@ -424,6 +429,8 @@ label{
 
 .flexi_actionBtns{
 	margin-top: 8px;
+	position: relative;
+	z-index: 9;
 	a{
 		font-size: $fnt18;
 		line-height: 52px;
@@ -449,7 +456,7 @@ label{
 			height: 60px;
 			line-height: 60px;			
 			overflow: hidden;
-			font-size: $fnt18;
+			font-size: $fnt14;
 			color: $nav-clr;
 			&.done, &.active{
 				background: $nav-activeBG;
