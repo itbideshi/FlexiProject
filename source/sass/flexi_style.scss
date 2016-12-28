@@ -212,14 +212,17 @@ ul.benefitsList{
 .frm-cntrl-lg{
 	@include make-xs-column(12);	
 }
-.selectBox_container{
+select, .selectBox_container{
 	@extend .form-control;
-	@include flexi_txt();	
-	font-size: $fnt24;	
+	@include flexi_txt();
+	font-size: $fnt24;
 	position: relative;
 	line-height: 40px;
 	cursor: pointer;
-	box-shadow: none!important;
+	/*-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;*/
+	
 	&:after{
 		content:"";
 		display: inline-block;
@@ -508,7 +511,7 @@ label{
 			font-size: $fnt20;
 		}
 	}
-	.selectBox_container{
+	select, .selectBox_container{
 		font-size: $fnt20;
 	}
 	.errMsg{

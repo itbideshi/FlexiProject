@@ -63,5 +63,5 @@ function custom_select(){
 
 
 (function($){
-	custom_select();
+	//custom_select();
 })(jQuery);
