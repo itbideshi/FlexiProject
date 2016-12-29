@@ -537,11 +537,11 @@ label{
 		width: 25px;
 		height: 25px;
 	}
-
 	.flexi_nav{
 		ul{
-			margin-left: 15px;
-			margin-right: 15px;
+			position: relative;
+			margin-left: -23px;
+			margin-right: -23px;
 			li{
 				font-size: $fnt18;
 			}			
