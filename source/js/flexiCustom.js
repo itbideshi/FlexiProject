@@ -1,4 +1,5 @@
 (function($) {
+
 	$.each(['show', 'hide'], function(i, ev) {
 		var el = $.fn[ev];
 		$.fn[ev] = function() {
@@ -6,8 +7,6 @@
 			return el.apply(this, arguments);
 		};
 	});
-})(jQuery);
-
 
 function custom_select(){
 	$("select").each(function(){
@@ -39,7 +38,7 @@ function custom_select(){
 		$(this).toggleClass('opened').siblings(".options_container").toggle();
 	});
 
-	$(document).on('click', function(){
+	$("body").on('click', function(){
 		$(".options_container:visible").hide(); 	
 	});
 	
@@ -60,8 +59,6 @@ function custom_select(){
 	});
 };
 
+custom_select();
 
-
-(function($){
-	//custom_select();
-})(jQuery);
+}(jQuery));
