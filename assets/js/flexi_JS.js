@@ -1,1 +1,64 @@
-!function(n){function e(t){if(o[t])return o[t].exports;var r=o[t]={exports:{},id:t,loaded:!1};return n[t].call(r.exports,r,r.exports,e),r.loaded=!0,r.exports}var o={};return e.m=n,e.c=o,e.p="/assets/",e(0)}([function(n,e,o){o(2),o(3),o(4),o(5),o(1)},function(n,e){},function(n,e){n.exports="../images/flexi_logo.png"},function(n,e){n.exports="../images/id_card.png"},function(n,e){n.exports="../images/over18.png"},function(n,e){n.exports="../images/upfront_fee.png"}]);
+(function($) {
+
+	$.each(['show', 'hide'], function(i, ev) {
+		var el = $.fn[ev];
+		$.fn[ev] = function() {
+			this.trigger(ev);
+			return el.apply(this, arguments);
+		};
+	});
+
+function custom_select(){
+	$("select").each(function(){
+		$(this).hide();
+		$( "<span class='selectBox_container' /><ul class='options_container' />" ).insertAfter($(this));
+		var options = $(this).siblings('.options_container');
+		var selText = $(this).siblings('.selectBox_container');
+		selText.html($(this).find('option:selected').text());
+		var opt = $(this).children('option');
+		for(var i=0; i<opt.length; i++){
+			options.append('<li>'+opt[i].text+'</li>');
+		}
+		var selectedIndx = $(this).find('option:selected').index();
+		$(this).siblings(".options_container").find("li").removeClass('selected').eq(selectedIndx).addClass('selected');
+
+	});
+
+	$("select").on('change', function(){
+		var selText = $(this).siblings('.selectBox_container');
+		selText.html($(this).find('option:selected').text());
+
+		var selectedIndx = $(this).find('option:selected').index();
+		$(this).siblings(".options_container").find("li").removeClass('selected').eq(selectedIndx).addClass('selected');
+
+	});
+
+	$('.selectBox_container').on('click', function(e){
+		e.stopPropagation();
+		$(this).toggleClass('opened').siblings(".options_container").toggle();
+	});
+
+	$("body").on('click', function(){
+		$(".options_container:visible").hide(); 	
+	});
+	
+	$(".options_container li").on("click", function(e){
+		e.stopPropagation();
+		var getIndex = $(this).index();
+		console.log(getIndex);
+		$(this).parent('ul').siblings('select').find('option').eq(getIndex).prop('selected', true).trigger('change');
+		$(this).parent('ul').hide();
+	});
+
+	$(".options_container").on("show", function(){
+		$(this).siblings(".selectBox_container").addClass("opened");
+	});
+
+	$(".options_container").on("hide", function(){
+		$(this).siblings(".selectBox_container").removeClass("opened");
+	});
+};
+
+custom_select();
+
+}(jQuery));
